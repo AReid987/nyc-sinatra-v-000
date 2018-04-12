@@ -4,6 +4,6 @@ class ApplicationController < Sinatra::Base
   register Sinatra::Twitter::Bootstrap::Assets
 
   get '/applicaton' do
-    erb :'applicaton/root'
-  end 
+    "hello world"
+  end
 end
