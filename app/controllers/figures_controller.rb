@@ -17,7 +17,7 @@ class FiguresController < ApplicationController
     #end
     Title.all.each do |title|
       if title.id == params[:figure][:title_ids]
-        @title = tile
+        @title = title
       end
     end
     #@landmark = Landmark.find(params[:figure][:landmark_ids])
