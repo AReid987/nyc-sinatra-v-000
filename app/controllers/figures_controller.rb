@@ -11,6 +11,9 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
+    if !params[:figure][:title_ids].empty?
+      @title = Title.find(params[:figure][:title_ids])
+    end
     binding.pry
   end
 
