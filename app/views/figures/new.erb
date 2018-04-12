@@ -11,4 +11,12 @@
   <% @titles.each do |title| %>
   <input type="checkbox" name="figure[title_ids][]"><%= title.name %></input>
   <% end %>
+
+  <br></br>
+  <label>Choose a Landmark:</label>
+  <br></br>
+
+  <% @landmarks.each do |landmark| %>
+  <input type="checkbox" name="figure[landmark_ids][]"><%= landmark.name %></input>
+  <% end %>
 </form>
