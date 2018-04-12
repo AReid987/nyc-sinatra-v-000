@@ -13,6 +13,7 @@ class FiguresController < ApplicationController
   post '/figures' do
     if !params[:figure][:title_ids].empty?
       @title = Title.find(params[:figure][:title_ids])
+      @figure = Figure.create(name: params[:figure][:name])
     end
     binding.pry
   end
