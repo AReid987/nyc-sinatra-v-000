@@ -22,7 +22,7 @@ class FiguresController < ApplicationController
       end
     end
     #@landmark = Landmark.find(params[:figure][:landmark_ids])
-    binding.pry
+    #binding.pry
   end
 
 end
