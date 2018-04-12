@@ -19,11 +19,11 @@ class FiguresController < ApplicationController
       if title.id == params[:figure][:title_ids].join.to_i
         @title = title
         @figure = Figure.create(name: params[:figure][:name])
-        @figure.titles << @title 
+        @figure.titles << @title
       end
     end
     #@landmark = Landmark.find(params[:figure][:landmark_ids])
-    binding.pry
+    #binding.pry
     #@figure = Figure.create(name: params[:figure][:name], titles: @title)
 
   end
