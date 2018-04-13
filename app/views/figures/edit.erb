@@ -1,4 +1,4 @@
-Hello World
+
 <form action="/figures/<%= @figure.id %>" method="POST">
 
     <h3>Edit a figure:</h3>
@@ -14,6 +14,6 @@ Hello World
     <input id="title_<%= title.id %>"type="checkbox" name="figure[title_ids][]" value="<%= title.id %>"><%= title.name %></input>
     <% end %>
 
-  
+
     <input type="submit" value="Edit Figure"></input>
 </form>
