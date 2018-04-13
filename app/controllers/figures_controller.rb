@@ -56,6 +56,8 @@ class FiguresController < ApplicationController
   end
 
   post '/figures/:id' do
+    @figure = Figure.find(params[:id])
+    
     binding.pry
   end
 end
