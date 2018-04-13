@@ -12,12 +12,12 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     Title.all.each do |title|
-      if title.id.to_s == params[:figure][:title_ids]
+      if title.id.to_s == params[:figure][:title_ids].join 
         @title = title
         @figure = Figure.create(name: params[:figure][:name], title: @title)
       end
     end
-    binding.pry 
+    binding.pry
 
     #@figure = Figure.create(name: params[:figure][:name])
     #if !params[:figure][:title_ids].empty?
