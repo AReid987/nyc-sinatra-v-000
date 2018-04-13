@@ -17,7 +17,7 @@ class FiguresController < ApplicationController
     #end
     if params[:title][:name].empty?
       Title.all.each do |title|
-        if title.id == params[:figure][:title_ids].join.to_i
+        if title == Title.find(params[:figure][:title_ids])
           @title = title
           @figure = Figure.create(name: params[:figure][:name])
           @figure.titles << @title
