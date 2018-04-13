@@ -61,10 +61,10 @@ class FiguresController < ApplicationController
     if !params[:landmark][:name].empty?
       @landmark = Landmark.create(name: params[:landmark][:name])
       @figure.landmarks << @landmark
-      
+
     end
 
-  
+
     erb :'figures/show'
   end
 end
