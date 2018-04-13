@@ -21,7 +21,7 @@ class FiguresController < ApplicationController
         end
       end
     end
-    binding.pry
+
     if !params[:figure][:landmark_ids].nil?
       Landmark.all.each do |landmark|
         if landmark.id.to_s == params[:figure][:landmark_ids].join
@@ -30,6 +30,7 @@ class FiguresController < ApplicationController
         end
       end
     end
+    binding.pry 
 
 
     #@figure = Figure.create(name: params[:figure][:name])
