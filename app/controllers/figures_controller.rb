@@ -62,6 +62,6 @@ class FiguresController < ApplicationController
       @landmark = Landmark.create(name: params[:landmark][:name])
       @figure.landmarks << @landmark
     end
-    binding.pry
+    #binding.pry
   end
 end
