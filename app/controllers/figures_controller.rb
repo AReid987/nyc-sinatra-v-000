@@ -15,7 +15,7 @@ class FiguresController < ApplicationController
       if title.id.to_s == params[:figure][:title_ids].join
             binding.pry
         @title = title
-        @figure = Figure.create(name: params[:figure][:name], title: @title)
+        @figure = Figure.create(name: params[:figure][:name], titles: @title)
 
       end
     end
