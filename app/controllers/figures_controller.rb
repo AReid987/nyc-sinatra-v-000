@@ -13,7 +13,7 @@ class FiguresController < ApplicationController
   post '/figures' do
     @figure = Figure.create(name: params[:figure][:name])
 
-    if !params[:figure][:title_ids].empty?
+    if params[:figure][:title_ids] != ""
       Title.all.each do |title|
         if title.id.to_s == params[:figure][:title_ids].join
           @title = title
@@ -21,7 +21,7 @@ class FiguresController < ApplicationController
         end
       end
     end
-    
+
     Landmark.all.each do |landmark|
       binding.pry
       #if landmark.id.to_s == params[:figure][:landmark_ids].join
