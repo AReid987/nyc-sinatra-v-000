@@ -22,7 +22,7 @@ class FiguresController < ApplicationController
           @figure = Figure.create(name: params[:figure][:name])
           @figure.titles << @title
         elsif title != Title.find(params[:figure][:title_ids])
-          binding.pry
+        
         end
       end
     end
