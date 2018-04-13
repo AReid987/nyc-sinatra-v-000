@@ -28,7 +28,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
 
-    erb '/landmarks/show'
+    erb :'/landmarks/show'
 
     #binding.pry
   end
