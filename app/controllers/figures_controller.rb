@@ -22,6 +22,7 @@ class FiguresController < ApplicationController
     end
     if !params[:figure][:landmark_ids].empty?
       @landmark = Landmark.find(params[:figure][:landmark_ids])
+      @figure.landmarks << @landmark 
       binding.pry
     end
     #@landmark = Landmark.find(params[:figure][:landmark_ids])
