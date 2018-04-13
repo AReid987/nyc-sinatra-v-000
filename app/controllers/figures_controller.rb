@@ -21,6 +21,7 @@ class FiguresController < ApplicationController
       Title.all.each do |title|
         @title = Title.find(params[:figure][:title_ids])
         @figure.titles << @title
+        binding.pry
       end
     end
     #@landmark = Landmark.find(params[:figure][:landmark_ids])
