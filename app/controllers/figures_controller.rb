@@ -18,6 +18,13 @@ class FiguresController < ApplicationController
         @figure.titles << @title 
       end
     end
+    Landmark.all.each do |landmark|
+      if landmark.id.to_s == params[:figure][:landmark_ids].join
+        @landmark = landmark
+        @figure = Figure.create(name: params[:figure][:name])
+        @figure.landmarks << @title 
+      end
+    end
     binding.pry
 
     #@figure = Figure.create(name: params[:figure][:name])
