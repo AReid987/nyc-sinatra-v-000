@@ -11,18 +11,18 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
+    @figure = Figure.create(name: params[:figure][:name])
+
     Title.all.each do |title|
       if title.id.to_s == params[:figure][:title_ids].join
         @title = title
-        @figure = Figure.create(name: params[:figure][:name])
         @figure.titles << @title
       end
     end
     Landmark.all.each do |landmark|
       if landmark.id.to_s == params[:figure][:landmark_ids].join
         @landmark = landmark
-        @figure = Figure.create(name: params[:figure][:name])
-        @figure.landmarks << @title 
+        @figure.landmarks << @title
       end
     end
     binding.pry
