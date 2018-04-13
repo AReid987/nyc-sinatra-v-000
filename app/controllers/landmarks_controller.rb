@@ -9,8 +9,11 @@ class LandmarksController < ApplicationController
     erb :'landmarks/new'
   end
 
+  get '/landmarks/:id' do 
+    @landmark = Landmark.find(params[:id])
+  end
+
   post '/landmarks' do
-    #binding.pry
     @landmark = Landmark.create(params[:landmark])
   end
 
