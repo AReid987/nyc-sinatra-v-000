@@ -64,6 +64,6 @@ class FiguresController < ApplicationController
       erb :''
     end
     erb :'figures/show'
-    #binding.pry
+    binding.pry
   end
 end
