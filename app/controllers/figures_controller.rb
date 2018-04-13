@@ -11,7 +11,13 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-  
+    Title.all.each do |title|
+      if title.id.to_s == params[:figure][:title_ids]
+        @title = title 
+        @figure = Figure.create(name: params[:figure][:name], title: @title)
+      end
+    end
+
     #@figure = Figure.create(name: params[:figure][:name])
     #if !params[:figure][:title_ids].empty?
     #  @title = Title.find(params[:figure][:title_ids])
