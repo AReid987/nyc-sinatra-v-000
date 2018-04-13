@@ -25,7 +25,7 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks/:id' do
-    @landmark = Landmark.find(params[:id]
+    @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
     #binding.pry
   end
