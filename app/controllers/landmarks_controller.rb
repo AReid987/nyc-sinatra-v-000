@@ -26,7 +26,7 @@ class LandmarksController < ApplicationController
 
   post '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
-    @landmark.update(params[:landmark])
+    @landmark.update(name: params[:landmark][:name], year_completed: params[:landmark][:year_completed])
 
     erb :'/landmarks/show'
 
