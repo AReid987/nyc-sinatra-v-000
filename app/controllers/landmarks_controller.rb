@@ -7,5 +7,5 @@ class LandmarksController < ApplicationController
   post '/landmarks' do
     binding.pry 
   end
-  
+
 end
