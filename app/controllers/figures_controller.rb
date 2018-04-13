@@ -15,6 +15,7 @@ class FiguresController < ApplicationController
       if title.id.to_s == params[:figure][:title_ids].join 
         @title = title
         @figure = Figure.create(name: params[:figure][:name], title: @title)
+        binding.pry
       end
     end
     binding.pry
