@@ -12,7 +12,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     Title.all.each do |title|
-      if title.id.to_s == params[:figure][:title_ids].join 
+      if title.id.to_s == params[:figure][:title_ids].join
         @title = title
         @figure = Figure.create(name: params[:figure][:name], title: @title)
         binding.pry
