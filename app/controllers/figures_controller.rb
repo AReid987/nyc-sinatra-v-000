@@ -22,12 +22,12 @@ class FiguresController < ApplicationController
           @figure = Figure.create(name: params[:figure][:name])
           @figure.titles << @title
         elsif title != Title.find(params[:figure][:title_ids])
-          binding.pry 
+          binding.pry
         end
       end
     end
     #@landmark = Landmark.find(params[:figure][:landmark_ids])
-    binding.pry
+    #binding.pry
     #@figure = Figure.create(name: params[:figure][:name], titles: @title)
 
   end
