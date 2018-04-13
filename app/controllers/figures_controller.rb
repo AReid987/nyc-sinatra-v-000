@@ -14,7 +14,8 @@ class FiguresController < ApplicationController
     Title.all.each do |title|
       if title.id.to_s == params[:figure][:title_ids].join
         @title = title
-        @figure = Figure.create(name: params[:figure][:name], titles: @title)
+        @figure = Figure.create(name: params[:figure][:name])
+        @figure.titles << @title 
 
       end
     end
