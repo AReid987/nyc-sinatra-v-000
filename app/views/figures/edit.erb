@@ -7,5 +7,16 @@ Hello World
     <input id="figure_name" type="text" name="figure[name]"></input>
     <br></br>
 
+    <label>Choose a Title:</label>
+    <br></br>
+
+    <% @titles.each do |title| %>
+    <input id="title_<%= title.id %>"type="checkbox" name="figure[title_ids][]" value="<%= title.id %>"><%= title.name %></input>
+    <% end %>
+
+    <br></br>
+    <label>Choose a Landmark:</label>
+    <br></br>
+
   
 </form>
