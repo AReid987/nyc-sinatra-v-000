@@ -17,7 +17,7 @@ class FiguresController < ApplicationController
     #end
     title = Title.find(params[:figure][:title_ids])
     Title.all.each do |title|
-      
+
       if title
         @title = title
         @figure = Figure.create(name: params[:figure][:name])
