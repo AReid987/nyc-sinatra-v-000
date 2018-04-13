@@ -29,7 +29,7 @@ class LandmarksController < ApplicationController
     @landmark.update(params[:landmark])
 
     erb '/landmarks/show'
-    
+
     binding.pry
   end
 
