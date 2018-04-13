@@ -23,7 +23,7 @@ class FiguresController < ApplicationController
     Landmark.all.each do |landmark|
       if landmark.id.to_s == params[:figure][:landmark_ids].join
         @landmark = landmark
-        @figure.landmarks << @title
+        @figure.landmarks << @landmark 
       end
     end
     binding.pry
