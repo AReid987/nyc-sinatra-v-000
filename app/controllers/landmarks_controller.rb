@@ -30,7 +30,8 @@ class LandmarksController < ApplicationController
 
     erb :'/landmarks/show'
 
-    #binding.pry
+
+    binding.pry
   end
 
 end
