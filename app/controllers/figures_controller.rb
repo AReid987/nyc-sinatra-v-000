@@ -11,23 +11,18 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
+  
+    #@figure = Figure.create(name: params[:figure][:name])
     #if !params[:figure][:title_ids].empty?
     #  @title = Title.find(params[:figure][:title_ids])
-    #  @figure = Figure.create(name: params[:figure][:name], titles: @title)
+    #  @figure.titles << @title
     #end
-    @figure = Figure.create(name: params[:figure][:name])
-    if !params[:figure][:title_ids].empty?
-      @title = Title.find(params[:figure][:title_ids])
-      @figure.titles << @title
-    end
-    binding.pry
 
-    if !params[:figure][:landmark_ids].empty?
-      @landmark = Landmark.find(params[:figure][:landmark_ids])
-      @figure.landmarks << @landmark
-    end
-    #@landmark = Landmark.find(params[:figure][:landmark_ids])
-    #@figure = Figure.create(name: params[:figure][:name], titles: @title)
+    #if !params[:figure][:landmark_ids].empty?
+    #  @landmark = Landmark.find(params[:figure][:landmark_ids])
+    #  @figure.landmarks << @landmark
+    #end
+
 
   end
 
