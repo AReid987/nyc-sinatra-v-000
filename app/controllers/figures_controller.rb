@@ -30,6 +30,11 @@ class FiguresController < ApplicationController
         end
       end
     end
+
+    if !params[:title][:name].empty?
+      @title = Title.create(name: params[:title][:name])
+      @figure.titles << @title 
+    end 
     binding.pry 
   end
 
