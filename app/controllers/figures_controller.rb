@@ -20,10 +20,11 @@ class FiguresController < ApplicationController
       @title = Title.find(params[:figure][:title_ids])
       @figure.titles << @title
     end
+    binding.pry
+
     if !params[:figure][:landmark_ids].empty?
       @landmark = Landmark.find(params[:figure][:landmark_ids])
       @figure.landmarks << @landmark 
-      binding.pry
     end
     #@landmark = Landmark.find(params[:figure][:landmark_ids])
     #@figure = Figure.create(name: params[:figure][:name], titles: @title)
