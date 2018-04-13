@@ -63,7 +63,8 @@ class FiguresController < ApplicationController
       @figure.landmarks << @landmark
       erb :''
     end
-    erb :'figures/show'
+    
     binding.pry
+    erb :'figures/show'
   end
 end
