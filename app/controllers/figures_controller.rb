@@ -54,5 +54,6 @@ class FiguresController < ApplicationController
   end
 
   post '/figures/:id' do
+    binding.pry 
   end 
 end
