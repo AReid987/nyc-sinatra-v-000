@@ -21,12 +21,13 @@ class FiguresController < ApplicationController
     end
 
     Landmark.all.each do |landmark|
+      binding.pry
       if landmark.id.to_s == params[:figure][:landmark_ids].join
         @landmark = landmark
-        @figure.landmarks << @landmark 
+        @figure.landmarks << @landmark
       end
     end
-    binding.pry
+
 
     #@figure = Figure.create(name: params[:figure][:name])
     #if !params[:figure][:title_ids].empty?
