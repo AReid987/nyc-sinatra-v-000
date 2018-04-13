@@ -19,13 +19,8 @@ class FiguresController < ApplicationController
 
     if !params[:title][:title_ids].empty?
       Title.all.each do |title|
-        if title == Title.find(params[:figure][:title_ids])
-          @title = title
-
-          @figure.titles << @title
-        elsif title != Title.find(params[:figure][:title_ids])
-
-        end
+        @title = Title.find(params[:figure][:title_ids])
+        @figure.titles << @title
       end
     end
     #@landmark = Landmark.find(params[:figure][:landmark_ids])
