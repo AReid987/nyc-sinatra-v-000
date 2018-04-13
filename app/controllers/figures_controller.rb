@@ -16,7 +16,7 @@ class FiguresController < ApplicationController
             binding.pry
         @title = title
         @figure = Figure.create(name: params[:figure][:name], title: @title)
-    
+
       end
     end
     binding.pry
