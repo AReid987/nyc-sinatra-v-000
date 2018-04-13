@@ -22,12 +22,14 @@ class FiguresController < ApplicationController
       end
     end
     binding.pry 
-    Landmark.all.each do |landmark|
+    if !params[:figure][:landmark_ids].nil?
+      Landmark.all.each do |landmark|
 
-      #if landmark.id.to_s == params[:figure][:landmark_ids].join
-      #  @landmark = landmark
-      #  @figure.landmarks << @landmark
-      #end
+        #if landmark.id.to_s == params[:figure][:landmark_ids].join
+        #  @landmark = landmark
+        #  @figure.landmarks << @landmark
+        #end
+      end
     end
 
 
