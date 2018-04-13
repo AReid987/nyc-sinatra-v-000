@@ -16,12 +16,12 @@ class FiguresController < ApplicationController
     #  @figure = Figure.create(name: params[:figure][:name], titles: @title)
     #end
     @figure = Figure.create(name: params[:figure][:name])
-    
+
     if params[:title][:name] == ""
       Title.all.each do |title|
         if title == Title.find(params[:figure][:title_ids])
           @title = title
-          
+
           @figure.titles << @title
         elsif title != Title.find(params[:figure][:title_ids])
 
