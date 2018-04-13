@@ -53,6 +53,6 @@ class FiguresController < ApplicationController
     end
   end
 
-  post '/figures/:id' do 
+  post '/figures/:id' do
   end 
 end
